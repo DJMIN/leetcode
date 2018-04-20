@@ -25,8 +25,8 @@ class Solution:
         res = 0
 
         res += ex[s[0]]
-        for index, ch in enumerate(s[]):
-            temp = ex.get(s[index-1: index])
+        for index, ch in enumerate(s[1:]):
+            temp = ex.get(s[index: index+2])
             res += temp if temp else ex[ch]
 
         return res
